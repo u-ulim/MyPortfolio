@@ -1,0 +1,38 @@
+const styles = {
+  innerWidth: "2xl:max-w-[1280px] w-full",
+  interWidth: "lg:w-[80%] w-[100%]",
+
+  paddings: "sm:p-16 xs:p-8 px-6 py-12",
+  yPaddings: "sm:py-16 xs:py-8 py-12",
+  xPaddings: "sm:px-16 px-6",
+  topPaddings: "sm:pt-16 xs:pt-8 pt-12",
+  bottomPaddings: "sm:pb-16 xs:pb-8 pb-12",
+
+  flexCenter: "flex justify-center items-center",
+  flexStart: "flex justify-start items-start",
+  flexEnd: "flex justify-end",
+  navPadding: "pt-[98px]",
+
+  // hero section
+  heroHeading:
+    "font-bold lg:text-[120px] md:text-[160px] sm:text-[100px] text-[70px] lg:leading-[120%] md:leading-[140%] sm:leading-[140%] leading-[140%] uppercase text-[#1a1a1a]",
+
+  textHeading:
+    "font-bold text-[24px] lg:text-[24px] md:text-[24px] sm:text-[24px] lg:leading-[120%] md:leading-[140%] sm:leading-[140%] leading-[140%] uppercase bg-gradient-to-r from-[#2dd4bf] via-[#1a1a1a] to-[#2dd4bf] text-transparent bg-clip-text bg-[length:200%_200%] animate-gradient",
+
+  heroGradientBox: `absolute w-full h-[300px] rounded-tl-[140px] z-[0] -top-[30px] 
+    bg-[#FF7FFF]/5
+    backdrop-blur-sm
+    bg-gradient-to-r from-[#2dd4bf]/5 via-transparent to-[#2dd4bf]/5
+    before:content-[''] before:absolute before:inset-0 
+    before:rounded-tl-[140px] before:border-t-[#FF7FFF]/30 
+    before:border-t-[1px] before:top-[6px]`,
+
+  heroOText:
+    "font-bold lg:text-[120px] md:text-[160px] sm:text-[100px] text-[70px] lg:leading-[120%] md:leading-[140%] sm:leading-[140%] leading-[140%] uppercase text-[#1a1a1a] bg-gradient-to-r from-[#2dd4bf] via-[#1a1a1a] to-[#2dd4bf] text-transparent bg-clip-text bg-[length:200%_200%] animate-gradient",
+
+  heroDText:
+    "lg:w-[140px] md:w-[180px] sm:w-[120px] w-[60px] lg:h-[90px] md:h-[90px] sm:h-[60px] h-[40px] lg:border-[15px] md:border-[15px] sm:border-[8px] border-[6px] rounded-r-[50px] border-light-text dark:border-dark-text sm:mx-2 mx-[6px]",
+};
+
+export default styles;
