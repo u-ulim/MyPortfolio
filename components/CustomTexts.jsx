@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
 
 import { textVariant2, textContainer } from "../utils/motion";
 
@@ -19,4 +20,11 @@ export const TypingText = ({ title, textStyles }) => (
   </motion.p>
 );
 
-export const TitleText = () => <h2>Title Text</h2>;
+export const TitleText = ({ title, textStyles }) => (
+  <motion.h
+    variants={fadeIn("up", "tween", 0.2, 1)}
+    className={`mt-[30px] font-extrabold sm:text-[48px] text-[20px] text-center relative z-20 ${textStyles}`}
+  >
+    {title}
+  </motion.h>
+);

@@ -16,7 +16,7 @@ import {
 } from "../components/icons";
 
 const Hero = () => (
-  <section className={`${styles.yPaddings}sm:pl-16 pl-6`}>
+  <section className={`${styles.yPaddings}sm:pl-16 pl-6 relative z-10`}>
     <motion.div
       variants={staggerContainer}
       initial="hidden"

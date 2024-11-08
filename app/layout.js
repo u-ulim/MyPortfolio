@@ -15,7 +15,7 @@ const RootLayout = ({ children }) => (
     </head>
     <body>
       <ThemeProvider>
-        <div className="min-h-screen bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text transition-colors duration-200">
+        <div className="min-h-screen bg-dark-bg dark:bg-dark-bg text-light-text dark:text-dark-text transition-colors duration-200">
           {children}
           <ThemeToggle />
         </div>
