@@ -29,7 +29,7 @@ const Footer = () => {
               alt="headset"
               className="w-[24px] h-[24px] object-contain"
             />
-            <span className="font-normal text-[16px] leading-[20px]">
+            <span className="font-normal text-[16px] text-white leading-[20px]">
               함께하기
             </span>
           </button>

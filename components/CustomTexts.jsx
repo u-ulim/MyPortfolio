@@ -23,7 +23,7 @@ export const TypingText = ({ title, textStyles }) => (
 export const TitleText = ({ title, textStyles }) => (
   <motion.h
     variants={fadeIn("up", "tween", 0.2, 1)}
-    className={`mt-[30px] font-extrabold sm:text-[48px] text-[20px] text-center relative z-20 ${textStyles}`}
+    className={`mt-[30px] font-extrabold sm:text-[48px] text-[20px] text-center relative z--200 ${textStyles}`}
   >
     {title}
   </motion.h>

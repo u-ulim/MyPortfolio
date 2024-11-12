@@ -16,7 +16,7 @@ import {
 } from "../components/icons";
 
 const Hero = () => (
-  <section className={`${styles.yPaddings}sm:pl-16 pl-6 relative z-10`}>
+  <section className={`relative z-10`}>
     <motion.div
       variants={staggerContainer}
       initial="hidden"
@@ -24,13 +24,13 @@ const Hero = () => (
       viewport={{ once: false, amount: 0.25 }}
       className={`${styles.innerWidth} mx-auto flex flex-col`}
     >
-      <div className="flex items-center flex-col relative z-10">
+      <div className="flex items-center justify-center flex-col relative z-10">
         <motion.div
           variants={textVariant(1.1)}
-          className="flex flex-row justify-center items-center"
+          className="flex flex-row justify-center items-center mt-[120px]"
         >
           <motion.h1
-            className={`${styles.heroHeading} text-light-text dark:text-dark-text`}
+            className={`${styles.heroHeading} text-light-text dark:text-dark-text `}
           >
             FRONTEN
           </motion.h1>
@@ -57,7 +57,7 @@ const Hero = () => (
       </div>
       <motion.div
         variants={slideIn("right", "tween", 1.5, 1)}
-        className="relative w-full md:-mt-[20px] -mt-[12px]"
+        className={`${styles.yPaddings} relative w-full md:-mt-[20px] -mt-[12px] sm:pl-16 pl-6`}
       >
         <div className={styles.heroGradientBox} />
         <img
@@ -66,7 +66,7 @@ const Hero = () => (
           className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
         />
         <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
-          <div className="flex items-center gap-[14px] absolute z-10 right-[16px] top-[30px]">
+          <div className="flex items-center gap-[26px] sm:gap-[18px] absolute z-10 right-[16px] top-[10px] sm:top-[30px]">
             <a href="https://github.com/kimdokyung">
               <GithubIcon className="object-contain" />
             </a>

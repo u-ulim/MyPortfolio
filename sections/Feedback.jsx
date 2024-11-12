@@ -7,7 +7,7 @@ import { workExperience } from "../constants";
 import Experience from "../components/Experience";
 
 const Feedback = () => (
-  <section className={`${styles.paddings} relative z-10`}>
+  <section className={`${styles.paddings}  z-10`}>
     <motion.div
       variants={staggerContainer}
       initial="hidden"
@@ -20,7 +20,7 @@ const Feedback = () => (
         className="flex-[0.5] lg:max-w-[370px] flex  flex-col gradient-05 sm:p-8 p-4 rounded-[32px] border-[1px] border-[#6a6a6a] relative"
       >
         <div className="absolute inset-0 z--10 feedback-gradient" />
-        <div className="relative z-10">
+        <div className=" z-10">
           <h4 className="font-bold sm:text-[32px] text-[26px] sm:leading-[40px] leading-[36px] text-gray-900 dark:text-gray-200">
             경력 및 교육 사항
           </h4>

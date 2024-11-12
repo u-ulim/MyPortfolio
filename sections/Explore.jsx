@@ -21,7 +21,7 @@ const Explore = () => {
       >
         <TypingText title="Project Introduction" textStyles="text-center" />
         <TitleText title={"팀 프로젝트 & 개인 프로젝트"} textStyles="" />
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[100vh] gap-10 sm:gap-5">
           {exploreWorlds.map((world, index) => (
             <ExploreCard
               key={index}

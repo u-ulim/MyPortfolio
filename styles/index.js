@@ -3,7 +3,7 @@ const styles = {
   interWidth: "lg:w-[80%] w-[100%]",
 
   paddings: "sm:p-16 xs:p-8 px-6 py-12",
-  yPaddings: "sm:py-16 xs:py-8 py-12",
+  // yPaddings: "sm:py-16 xs:py-8 py-12",
   xPaddings: "sm:px-16 px-6",
   topPaddings: "sm:pt-16 xs:pt-8 pt-12",
   bottomPaddings: "sm:pb-16 xs:pb-8 pb-12",
@@ -15,7 +15,7 @@ const styles = {
 
   // hero section
   heroHeading:
-    "font-bold lg:text-[120px] md:text-[160px] sm:text-[100px] text-[70px] lg:leading-[120%] md:leading-[140%] sm:leading-[140%] leading-[140%] uppercase text-[#1a1a1a]",
+    "font-bold lg:text-[120px] md:text-[120px] sm:text-[100px] text-[60px] lg:leading-[120%] md:leading-[140%] sm:leading-[140%] leading-[70%]  uppercase text-[#1a1a1a]",
 
   textHeading:
     "font-bold text-[24px] lg:text-[24px] md:text-[24px] sm:text-[24px] lg:leading-[120%] md:leading-[140%] sm:leading-[140%] leading-[140%] uppercase bg-gradient-to-r from-[#2dd4bf] via-[#1a1a1a] to-[#2dd4bf] text-transparent bg-clip-text bg-[length:200%_200%] animate-gradient",
@@ -42,9 +42,14 @@ const styles = {
 
   // starrySky
   noiteBg:
-    "w-full h-full absolute overflow-hidden bg-gradient-to-b from-white via-[#e0e7ff] to-[#f3f4f6] dark:bg-gradient-to-b dark:from-black dark:via-[#191327] dark:to-[#2b2048]",
+    "w-full h-full absolute bg-gradient-to-b from-white via-[#e0e7ff] to-[#f3f4f6] dark:bg-gradient-to-b dark:from-black dark:via-[#191327] dark:to-[#2b2048]",
 
-  estrela: "bg-white rounded-full absolute animate-estrela", // 테일윈드 클래스를 사용하여 estrela 스타일 정의
+  estrela: "bg-white rounded-full absolute animate-estrela",
+  exploreModalList: "flex mt-[12px] text-[14px]",
+  exploreModalListTitle:
+    "flex flex-[0.5] sm:flex-[0.3] gap-[4px] text-gray-500 ",
+  exploreModalListContent:
+    "flex flex-[0.5] sm:flex-1 w-[250px] whitespace-nowrap overflow-hidden overflow-ellipsis text-ellipsis",
 };
 
 export default styles;
