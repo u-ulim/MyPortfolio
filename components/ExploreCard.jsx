@@ -45,8 +45,10 @@ const ExploreCard = ({
     // 모달이 열릴 때 스크롤 비활성화
     if (isOpenModal) {
       document.body.style.overflow = "hidden"; // 스크롤 비활성화
+      document.body.style.marginRight = "15px";
     } else {
       document.body.style.overflow = ""; // 기본 상태로 복원
+      document.body.style.marginRight = "0px";
     }
 
     // 컴포넌트 언마운트 시 원래 상태로 복원
@@ -139,7 +141,7 @@ const ExploreCard = ({
       {isOpenModal && (
         <div
           onClick={() => setIsOpenModal(false)} // 배경 클릭 시 모달 닫기
-          className="fixed top-0 left-0 w-full h-full z-20 bg-black/70  dark:bg-gray-800/80 flex items-center justify-center cursor-pointer border-gray-100 overflow-scroll"
+          className="fixed top-0 left-0 w-full h-full z-20 bg-black/70  dark:bg-gray-800/80 flex items-center justify-center cursor-pointer border-gray-100 overflow-y-scroll"
         >
           <ExploreModal
             className="bg-white/100 dark:bg-black sm:w-[70%] sm:h-[80%] w-[90%] h-[90%] z-50 rounded-[12px] cursor-default flex items-center justify-center "

@@ -12,8 +12,8 @@ import {
 import { ArrowDownIcon } from "../components/icons";
 
 const About = () => (
-  <section className={`${styles.paddings} mt-[40px] relative z-10`}>
-    <div className="gradient-02 z-0 absolute top-[20%] right-[20%] opacity-[0.5]" />
+  <section className={`${styles.paddings} mt-[40px] relative z-10 `}>
+    <div className="gradient-02 z-0 absolute top-[20%] right-[20%] opacity-[0.5]  " />
 
     <motion.div
       variants={staggerContainer}

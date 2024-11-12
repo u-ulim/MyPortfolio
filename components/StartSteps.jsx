@@ -3,7 +3,6 @@ import styles from "../styles";
 import { ArrowDownIcon, FileArrowDownIcon } from "./icons";
 
 const StartSteps = ({ number, text }) => {
-  console.log(number, text);
   return (
     <div className={`${styles.flexCenter} flex-row`}>
       <div

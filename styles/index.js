@@ -23,7 +23,7 @@ const styles = {
   textFooterHeading:
     "font-bold text-[44px] lg:text-[64px] md:text-[64px] sm:text-[24px] lg:leading-[120%] md:leading-[140%] sm:leading-[140%] leading-[140%] uppercase bg-gradient-to-r from-[#2dd4bf] via-[#1a1a1a] to-[#2dd4bf] text-transparent bg-clip-text bg-[length:200%_200%] animate-gradient",
 
-  heroGradientBox: `absolute w-full h-[300px] rounded-tl-[140px] z-[0] -top-[30px] 
+  heroGradientBox: `absolute  w-full h-[300px]  sm:h-[500px] rounded-tl-[140px] z-[0] -top-[30px] 
     bg-[#FF7FFF]/5
     backdrop-blur-sm
     bg-gradient-to-r from-[#2dd4bf]/5 via-transparent to-[#2dd4bf]/5
