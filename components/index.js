@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import { TypingText, TitleText } from "./CustomTexts";
+import ModalContent from "./ModalContent";
 import ExploreCard from "./ExploreCard";
 import StartSteps from "./StartSteps";
 import NewFeatures from "./NewFeatures";
@@ -11,6 +12,7 @@ export {
   Navbar,
   TitleText,
   TypingText,
+  ModalContent,
   StartSteps,
   NewFeatures,
   ExploreCard,

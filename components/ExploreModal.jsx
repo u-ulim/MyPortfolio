@@ -2,6 +2,7 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import styles from "../styles";
+import ModalContent from "./ModalContent";
 
 const ExploreModal = ({
   className,
@@ -16,6 +17,8 @@ const ExploreModal = ({
   teamType,
   link,
   pathPdfLink,
+  logo,
+  startDescription,
 }) => {
   return (
     <motion.div
@@ -30,7 +33,7 @@ const ExploreModal = ({
         <h1 className="text-[24px] sm:text-[32px] font-bold mb-[32px]">
           {subTitle}
         </h1>
-        <ul>
+        <ul className="mb-[58px]">
           <li className={`${styles.exploreModalList}`}>
             <div className={`${styles.exploreModalListTitle}`}>
               <i className="w-[24px] h-[24px] cursor-pointer block">
@@ -102,8 +105,20 @@ const ExploreModal = ({
             </div>
           </li>
         </ul>
-
-        <div onClick={(e) => e.stopPropagation()}>{/* 추가적인 내용 */}</div>
+        <div className="pl-[4px] flex flex-col gap-12">
+          <div>
+            <img
+              src={logo}
+              alt="logo"
+              className="w-[100%] h-[100%] max-h-[120px] object-contain"
+            />
+          </div>
+          <ModalContent
+            title={"Team Project Start"}
+            description={startDescription}
+          />
+          <ModalContent title={"Study"} description={startDescription} />
+        </div>
       </div>
     </motion.div>
   );

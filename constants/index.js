@@ -2,6 +2,7 @@ export const exploreWorlds = [
   {
     id: "world-1",
     imgUrl: "/custom.png",
+    logo: "/nomore-logo.svg",
     title: "쓰레드 클론코딩",
     subTitle: "Thread",
     date: "24.09.09~24.10.18",
@@ -9,10 +10,12 @@ export const exploreWorlds = [
     link: "https://github.com/JH-JH-JH/thread-clone",
     pathPdfLink: "/thread.pdf",
     techStack: ["React", "Figma", "Firebase", "styled-components"],
+    startDescription: "Thread는",
   },
   {
     id: "world-2",
     imgUrl: "/nomore.png",
+    logo: "/nomore-logo.svg",
     title: "노모어피자 실제 개발",
     subTitle: "NoMorePizza",
     date: "24.10.20~24.11.20",
@@ -20,10 +23,12 @@ export const exploreWorlds = [
     link: "https://github.com/JH-JH-JH/no-more-pizza",
     pathPdfLink: "/no-more-pizza.pdf",
     techStack: ["Next", "TS", "tailwind", "Figma", "ai"],
+    startDescription: "NoMorePizza는",
   },
   {
     id: "world-3",
     imgUrl: "/custom.png",
+    logo: "/prime-logo.svg",
     title: "프라임 기획코딩",
     subTitle: "Prime",
     date: "24.07.15~24.09.06",
@@ -31,10 +36,14 @@ export const exploreWorlds = [
     link: "https://github.com/JH-JH-JH/prime-clone",
     pathPdfLink: "/prime.pdf",
     techStack: ["scss", "js", "Figma"],
+    startDescription:
+      "4인 1조로 한 팀을 이뤘다. PM이라는 자리가 설레기도 하면서 걱정도 많이 됐다. 기획과 설계, 개발 과정에서 시야를 넓게 봐야하기 때문에, 혹여 팀원들에게 잘못된 방향성을 제시할까봐 겁도 났던 거 같다.  그치만, 의견도 많이 내주고 힘내라고 복돋아주는 팀원들 덕에 빠르게 방향성과 컨셉을 잡고, 순차적으로 진행할 수 있었다",
   },
   {
     id: "world-4",
     imgUrl: "/netflix.png",
+    logo: "/nomore-logo.svg",
+
     title: "OTT 서비스 사이트",
     subTitle: "OTT",
     date: "24.09.09~24.10.18",
@@ -42,10 +51,13 @@ export const exploreWorlds = [
     link: "https://github.com/JH-JH-JH/ott-clone",
     pathPdfLink: "/ott.pdf",
     techStack: ["React", "TS", "Tailwind", "Recoil"],
+    startDescription: "OTT는",
   },
   {
     id: "world-5",
     imgUrl: "/custom.png",
+    logo: "/nomore-logo.svg",
+
     title: "개인 커스텀",
     subTitle: "Custom",
     date: "24.07.15~24.09.06",
@@ -53,6 +65,7 @@ export const exploreWorlds = [
     link: "https://github.com/JH-JH-JH/custom-clone",
     pathPdfLink: "/custom.pdf",
     techStack: ["React", "TS", "tailwind", "graphql"],
+    startDescription: "Custom은",
   },
 ];
 

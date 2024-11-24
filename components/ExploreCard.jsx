@@ -19,6 +19,8 @@ const ExploreCard = ({
   link,
   pathPdfLink,
   techStack,
+  logo,
+  startDescription,
 }) => {
   const [isOpenModal, setIsOpenModal] = useState(false); // 모달 상태 관리
   const [tooltipIndex, setTooltipIndex] = useState(null); // 툴팁 상태 관리
@@ -144,7 +146,7 @@ const ExploreCard = ({
           className="fixed top-0 left-0 w-full h-full z-20 bg-black/70  dark:bg-gray-800/80 flex items-center justify-center cursor-pointer border-gray-100 overflow-y-scroll"
         >
           <ExploreModal
-            className="bg-white/100 dark:bg-black sm:w-[70%] sm:h-[80%] w-[90%] h-[90%] z-50 rounded-[12px] cursor-default flex items-center justify-center "
+            className="bg-white/100 dark:bg-black sm:w-[70%] sm:h-[80%] w-[90%] h-[90%] z-50 rounded-[12px] cursor-default flex items-center justify-center overflow-y-scroll"
             onClick={(e) => e.stopPropagation()} // 모달 내부 클릭 시 이벤트 전파 방지
             onClose={() => setIsOpenModal(false)} // onClose에서 모달 닫기
             id={id}
@@ -156,6 +158,8 @@ const ExploreCard = ({
             teamType={teamType}
             link={link}
             pathPdfLink={pathPdfLink}
+            logo={logo}
+            startDescription={startDescription}
           />
         </div>
       )}
