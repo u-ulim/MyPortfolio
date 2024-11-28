@@ -1,7 +1,7 @@
 import { Footer, Navbar, StarrySky } from "../components";
 import {
   About,
-  Explore,
+  Main,
   Feedback,
   GetStarted,
   Hero,
@@ -19,7 +19,7 @@ const Page = () => {
         <div className="relative z-50">
           <About />
           {/* <div className="absolute inset-0 gradient-03 z--10" /> */}
-          <Explore />
+          <Main />
         </div>
         <div className="relative z-10">
           <Insights />

@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import { TypingText, TitleText } from "./CustomTexts";
 import ModalContent from "./ModalContent";
-import ExploreCard from "./ExploreCard";
+import MainCard from "./MainCard";
 import StartSteps from "./StartSteps";
 import NewFeatures from "./NewFeatures";
 import InsightCard from "./InsightCard";
@@ -15,7 +15,7 @@ export {
   ModalContent,
   StartSteps,
   NewFeatures,
-  ExploreCard,
+  MainCard,
   InsightCard,
   Footer,
   StarrySky,

@@ -21,6 +21,7 @@
   border-radius: 24px; /* 모서리 둥글게 */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 }
+
 .gradient-01 {
   background-image: linear-gradient(
     270deg,
@@ -78,4 +79,37 @@
 
 .dark {
   --gradient-middle: #ffffff;
+}
+
+/* scrollbar */
+
+/* 기본 스크롤바 */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* 세로 스크롤바 너비 */
+  height: 8px; /* 가로 스크롤바 높이 */
+}
+
+/* 스크롤바 트랙 */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #fff; /* 트랙 배경색 */
+  border-radius: 12px; /* 트랙 둥근 모서리 */
+}
+
+/* 스크롤바 핸들 */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ccc; /* 핸들 배경색 */
+  border-radius: 12px; /* 핸들 둥근 모서리 */
+}
+
+/* 스크롤바 핸들 hover 효과 */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* hover 시 핸들 색상 */
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-track {
+  background: #000; /* 다크 모드 트랙 배경색 */
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2a2a2a; /* 다크 모드 핸들 배경색 */
 }

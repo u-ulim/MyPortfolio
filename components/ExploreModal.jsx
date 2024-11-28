@@ -19,6 +19,13 @@ const ExploreModal = ({
   pathPdfLink,
   logo,
   startDescription,
+  studyDescription,
+  subTitle01,
+  subTitle01Img,
+  subTitle01Description,
+  subTitle02,
+  subTitle02Img,
+  subTitle02Description,
 }) => {
   return (
     <motion.div
@@ -29,7 +36,7 @@ const ExploreModal = ({
       transition={{ duration: 0.3 }}
       onClick={onClick}
     >
-      <div className="w-[90%] sm:w-[70%] h-full border-white pt-[56px]">
+      <div className="w-[90%] sm:w-[70%] h-full border-white pt-[56px] pb-[56px]">
         <h1 className="text-[24px] sm:text-[32px] font-bold mb-[32px]">
           {subTitle}
         </h1>
@@ -117,7 +124,19 @@ const ExploreModal = ({
             title={"Team Project Start"}
             description={startDescription}
           />
-          <ModalContent title={"Study"} description={startDescription} />
+          <ModalContent title={"Study"} description={studyDescription} />
+
+          <ModalContent
+            title={"IA, WBS"}
+            subTitle01={subTitle01}
+            subTitle01Img={subTitle01Img}
+            subTitle01Description={subTitle01Description}
+          />
+          <ModalContent
+            subTitle02={subTitle02}
+            subTitle02Img={subTitle02Img}
+            subTitle02Description={subTitle02Description}
+          />
         </div>
       </div>
     </motion.div>
