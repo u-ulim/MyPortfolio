@@ -79,7 +79,7 @@ const MainCard = ({
       >
         <img
           src={imgUrl}
-          alt="planet-04"
+          alt={imgUrl}
           className="absolute w-full h-full object-cover rounded-[24px]"
         />
         {active !== id ? (
