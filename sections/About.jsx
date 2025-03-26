@@ -24,7 +24,7 @@ const About = () => (
     >
       <TypingText title="Hello!" textStyles="text-center relative z-20" />
 
-      <TitleText title={"Frontend Developer 김도경입니다 🧐2"} />
+      <TitleText title={"Frontend Developer 김도경입니다"} />
 
       <motion.div
         variants={fadeIn("up", "tween", 1, 1)} // motion 적용

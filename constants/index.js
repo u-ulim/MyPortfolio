@@ -55,7 +55,7 @@ export const exploreWorlds = [
   },
   {
     id: "world-4",
-    imgUrl: "/custom.png",
+    imgUrl: "/net.png",
     logo: "/nomore-logo.svg",
     title: "OTT 서비스 사이트",
     subTitle: "OTT",
