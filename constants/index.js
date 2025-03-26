@@ -16,7 +16,7 @@ export const exploreWorlds = [
   },
   {
     id: "world-2",
-    imgUrl: "/nomore.png",
+    imgUrl: "/custom.png",
     logo: "/nomore-logo.svg",
     title: "노모어피자 실제 개발",
     subTitle: "NoMorePizza",
@@ -55,7 +55,7 @@ export const exploreWorlds = [
   },
   {
     id: "world-4",
-    imgUrl: "/netflix.png",
+    imgUrl: "/custom.png",
     logo: "/nomore-logo.svg",
     title: "OTT 서비스 사이트",
     subTitle: "OTT",
