@@ -16,7 +16,7 @@ export const exploreWorlds = [
   },
   {
     id: "world-2",
-    imgUrl: "/nomore.png",
+    imgUrl: "nomore.png",
     logo: "/nomore-logo.svg",
     title: "노모어피자 실제 개발",
     subTitle: "NoMorePizza",
