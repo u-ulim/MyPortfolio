@@ -1,1 +1,1 @@
-self.__RSC_CSS_MANIFEST={"__entry_css__":{"/Users/gimdogyeong/projects/MyPortfolio/app/page":["/Users/gimdogyeong/projects/MyPortfolio/styles/globals.css","/Users/gimdogyeong/projects/MyPortfolio/components/StarrySky.css"]},"/Users/gimdogyeong/projects/MyPortfolio/app/page.js":["/Users/gimdogyeong/projects/MyPortfolio/components/StarrySky.css"],"/Users/gimdogyeong/projects/MyPortfolio/app/layout.js":["/Users/gimdogyeong/projects/MyPortfolio/styles/globals.css"]}
+self.__RSC_CSS_MANIFEST={}

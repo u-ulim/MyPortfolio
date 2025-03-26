@@ -20,7 +20,7 @@ const About = () => (
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col relative z-10`}
+      className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col relative npm z-10`}
     >
       <TypingText title="Hello!" textStyles="text-center relative z-20" />
 
