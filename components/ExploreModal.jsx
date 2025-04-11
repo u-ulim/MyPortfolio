@@ -18,6 +18,7 @@ const ExploreModal = ({
   link,
   pathPdfLink,
   logo,
+  iaWbs,
   startDescription,
   studyDescription,
   subTitle01,
@@ -121,22 +122,27 @@ const ExploreModal = ({
             />
           </div>
           <ModalContent
-            title={"Team Project Start"}
+            title={"Project Start"}
             description={startDescription}
           />
+
           <ModalContent title={"Study"} description={studyDescription} />
 
-          <ModalContent
-            title={"IA, WBS"}
-            subTitle01={subTitle01}
-            subTitle01Img={subTitle01Img}
-            subTitle01Description={subTitle01Description}
-          />
-          <ModalContent
-            subTitle02={subTitle02}
-            subTitle02Img={subTitle02Img}
-            subTitle02Description={subTitle02Description}
-          />
+          {iaWbs && (
+            <>
+              <ModalContent
+                title={"IA, WBS"}
+                subTitle01={subTitle01}
+                subTitle01Img={subTitle01Img}
+                subTitle01Description={subTitle01Description}
+              />
+              <ModalContent
+                subTitle02={subTitle02}
+                subTitle02Img={subTitle02Img}
+                subTitle02Description={subTitle02Description}
+              />
+            </>
+          )}
         </div>
       </div>
     </motion.div>

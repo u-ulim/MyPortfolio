@@ -6,7 +6,7 @@ import { useState } from "react";
 import styles from "../styles";
 import { MainCard, TypingText, TitleText } from "../components";
 import { fadeIn, staggerContainer } from "../utils/motion";
-import { exploreWorlds } from "../constants";
+import { projects } from "../constants";
 
 const Main = () => {
   const [active, setActive] = useState("world-2");
@@ -22,7 +22,7 @@ const Main = () => {
         <TypingText title="Project Introduction" textStyles="text-center" />
         <TitleText title={"팀 프로젝트 & 개인 프로젝트"} textStyles="" />
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[100vh] gap-10 sm:gap-5">
-          {exploreWorlds.map((world, index) => (
+          {projects.map((world, index) => (
             <MainCard
               key={index}
               {...world}

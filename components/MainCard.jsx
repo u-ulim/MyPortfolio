@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import styles from "../styles";
 import { fadeIn } from "../utils/motion";
 import ExploreModal from "./ExploreModal";
+import Link from "next/link";
 
 const MainCard = ({
   id,
@@ -20,6 +21,7 @@ const MainCard = ({
   pathPdfLink,
   techStack,
   logo,
+  iaWbs,
   startDescription,
   studyDescription,
   subTitle01,
@@ -128,18 +130,20 @@ const MainCard = ({
                 />
               </i>
             </div>
-            <div className="flex items-center justify-between gap-[12px] sm:justify-start mb-[12px]">
-              <p className="font-normal text-[16px] leading-[20.16px] text-gray-400 uppercase cursor-pointer">
-                ✈️ 사이트 구경하기
-              </p>
-              <i className="w-[20px] h-[20px] cursor-pointer block">
-                <img
-                  src="/link.svg"
-                  alt="link"
-                  className="w-full h-full object-cover"
-                />
-              </i>
-            </div>
+            <Link href={link} alt={title}>
+              <div className="flex items-center justify-between gap-[12px] sm:justify-start mb-[12px]">
+                <p className="font-normal text-[16px] leading-[20.16px] text-gray-400 uppercase cursor-pointer">
+                  ✈️ 사이트 구경하기
+                </p>
+                <i className="w-[20px] h-[20px] cursor-pointer block">
+                  <img
+                    src="/link.svg"
+                    alt="link"
+                    className="w-full h-full object-cover"
+                  />
+                </i>
+              </div>
+            </Link>
 
             <h2 className=" font-semibold sm:text-[32px] text-[24px] text-white">
               {title}
@@ -166,6 +170,7 @@ const MainCard = ({
             link={link}
             pathPdfLink={pathPdfLink}
             logo={logo}
+            iaWbs={iaWbs}
             startDescription={startDescription}
             studyDescription={studyDescription}
             subTitle01={subTitle01}

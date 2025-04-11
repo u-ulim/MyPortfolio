@@ -14,7 +14,6 @@ import { ArrowDownIcon } from "../components/icons";
 const About = () => (
   <section className={`${styles.paddings} mt-[40px] relative z-10 `}>
     <div className="gradient-02 z-0 absolute top-[20%] right-[20%] opacity-[0.5]  " />
-
     <motion.div
       variants={staggerContainer}
       initial="hidden"
@@ -23,9 +22,7 @@ const About = () => (
       className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col relative npm z-10`}
     >
       <TypingText title="Hello!" textStyles="text-center relative z-20" />
-
       <TitleText title={"Frontend Developer 김도경입니다"} />
-
       <motion.div
         variants={fadeIn("up", "tween", 1, 1)} // motion 적용
       >

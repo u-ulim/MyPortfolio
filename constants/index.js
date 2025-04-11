@@ -1,6 +1,21 @@
-export const exploreWorlds = [
+export const projects = [
   {
     id: "world-1",
+    imgUrl: "/nom.png",
+    logo: "/nomore-logo.svg",
+    title: "노모어피자 개발",
+    subTitle: "NoMorePizza",
+    date: "24.10.20~24.11.20",
+    teamType: "개인 프로젝트",
+    link: "https://nomorepizza.co.kr/",
+    pathPdfLink: "/no-more-pizza.pdf",
+    techStack: ["wp"],
+    startDescription:
+      "NoMorePizza는 기존 사이트를 리뉴얼해서 워드프레스로 구성해보았습니다.",
+    studyDescription: "",
+  },
+  {
+    id: "world-2",
     imgUrl: "/custom.png",
     logo: "/nomore-logo.svg",
     title: "쓰레드 클론코딩",
@@ -12,22 +27,7 @@ export const exploreWorlds = [
     techStack: ["react", "figma", "firebase", "styled-components"],
     startDescription: "Thread는",
     studyDescription: "",
-    IaWbs: "IA, WBS",
-  },
-  {
-    id: "world-2",
-    imgUrl: "/nom.png",
-    logo: "/nomore-logo.svg",
-    title: "노모어피자 실제 개발",
-    subTitle: "NoMorePizza",
-    date: "24.10.20~24.11.20",
-    teamType: "개인 프로젝트",
-    link: "https://github.com/JH-JH-JH/no-more-pizza",
-    pathPdfLink: "/no-more-pizza.pdf",
-    techStack: ["next", "ts", "tailwind", "figma", "ai"],
-    startDescription: "NoMorePizza는",
-    studyDescription: "",
-    IaWbs: "IA, WBS",
+    iaWbs: "IA, WBS",
   },
   {
     id: "world-3",
@@ -66,7 +66,7 @@ export const exploreWorlds = [
     techStack: ["react", "ts", "tailwind", "recoil"],
     startDescription: "OTT는",
     studyDescription: "",
-    IaWbs: "IA, WBS",
+    iaWbs: "IA, WBS",
   },
   {
     id: "world-5",
@@ -81,7 +81,7 @@ export const exploreWorlds = [
     techStack: ["react", "ts", "tailwind", "graphql"],
     startDescription: "Custom은",
     studyDescription: "",
-    IaWbs: "IA, WBS",
+    iaWbs: "IA, WBS",
   },
 ];
 
