@@ -16,6 +16,12 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/head.js"
+    ],
+    "/notion-test/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/notion-test/page.css",
+      "static/chunks/app/notion-test/page.js"
     ]
   }
 }

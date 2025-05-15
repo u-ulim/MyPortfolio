@@ -122,21 +122,28 @@ const ExploreModal = ({
             />
           </div>
           <ModalContent
+            id={id}
             title={"Project Start"}
             description={startDescription}
           />
 
-          <ModalContent title={"Study"} description={studyDescription} />
+          <ModalContent
+            id={id}
+            title={"Study"}
+            description={studyDescription}
+          />
 
           {iaWbs && (
             <>
               <ModalContent
+                id={id}
                 title={"IA, WBS"}
                 subTitle01={subTitle01}
                 subTitle01Img={subTitle01Img}
                 subTitle01Description={subTitle01Description}
               />
               <ModalContent
+                id={id}
                 subTitle02={subTitle02}
                 subTitle02Img={subTitle02Img}
                 subTitle02Description={subTitle02Description}

@@ -6,5 +6,16 @@ import WhatsNew from "./WhatsNew";
 import World from "./World";
 import Insights from "./Insights";
 import Feedback from "./Feedback";
+import NotionTest from "./NotionTest";
 
-export { Hero, About, Main, GetStarted, WhatsNew, World, Insights, Feedback };
+export {
+  Hero,
+  About,
+  Main,
+  GetStarted,
+  WhatsNew,
+  World,
+  Insights,
+  Feedback,
+  NotionTest,
+};
