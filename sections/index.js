@@ -6,7 +6,7 @@ import WhatsNew from "./WhatsNew";
 import World from "./World";
 import Insights from "./Insights";
 import Feedback from "./Feedback";
-import NotionTest from "./NotionTest";
+import NotionPage from "./NotionPage";
 
 export {
   Hero,
@@ -17,5 +17,5 @@ export {
   World,
   Insights,
   Feedback,
-  NotionTest,
+  NotionPage,
 };

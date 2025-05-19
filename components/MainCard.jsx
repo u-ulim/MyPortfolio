@@ -82,7 +82,16 @@ const MainCard = ({
         <img
           src={imgUrl}
           alt={imgUrl}
-          className="absolute w-full h-full object-cover rounded-[24px]"
+          className="absolute w-full h-full object-cover rounded-[24px] cursor-pointer"
+          onClick={(e) => {
+            e.stopPropagation(); // 이벤트 버블링 방지
+            if (active === id) {
+              // active 상태일 때만 모달 열기
+              handleModalClick();
+            } else {
+              handleClick(id); // active 아닐 때는 카드 활성화
+            }
+          }}
         />
         {active !== id ? (
           <>
@@ -160,25 +169,7 @@ const MainCard = ({
             className="bg-white/100 dark:bg-black sm:w-[70%] sm:h-[80%] w-[90%] h-[90%] z-50 rounded-[12px] cursor-default flex items-center justify-center overflow-y-scroll custom-scrollbar "
             onClick={(e) => e.stopPropagation()} // 모달 내부 클릭 시 이벤트 전파 방지
             onClose={() => setIsOpenModal(false)} // onClose에서 모달 닫기
-            id={id}
-            imgUrl={imgUrl}
-            title={title}
-            index={index}
             subTitle={subTitle}
-            date={date}
-            teamType={teamType}
-            link={link}
-            pathPdfLink={pathPdfLink}
-            logo={logo}
-            iaWbs={iaWbs}
-            startDescription={startDescription}
-            studyDescription={studyDescription}
-            subTitle01={subTitle01}
-            subTitle01Img={subTitle01Img}
-            subTitle01Description={subTitle01Description}
-            subTitle02={subTitle02}
-            subTitle02Img={subTitle02Img}
-            subTitle02Description={subTitle02Description}
           />
         </div>
       )}

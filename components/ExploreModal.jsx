@@ -3,31 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "../styles";
 import ModalContent from "./ModalContent";
-import NotionTest from "../sections/NotionTest";
-const ExploreModal = ({
-  className,
-  onClick,
-  onClose,
-  id,
-  imgUrl,
-  title,
-  index,
-  subTitle,
-  date,
-  teamType,
-  link,
-  pathPdfLink,
-  logo,
-  iaWbs,
-  startDescription,
-  studyDescription,
-  subTitle01,
-  subTitle01Img,
-  subTitle01Description,
-  subTitle02,
-  subTitle02Img,
-  subTitle02Description,
-}) => {
+import NotionPage from "../sections/NotionPage";
+const ExploreModal = ({ className, onClick, subTitle }) => {
   return (
     <motion.div
       className={className}
@@ -37,25 +14,7 @@ const ExploreModal = ({
       transition={{ duration: 0.3 }}
       onClick={onClick}
     >
-      <NotionTest
-        notionProjectName={subTitle}
-        id={id}
-        title={title}
-        date={date}
-        teamType={teamType}
-        link={link}
-        pathPdfLink={pathPdfLink}
-        logo={logo}
-        iaWbs={iaWbs}
-        startDescription={startDescription}
-        studyDescription={studyDescription}
-        subTitle01={subTitle01}
-        subTitle01Img={subTitle01Img}
-        subTitle01Description={subTitle01Description}
-        subTitle02={subTitle02}
-        subTitle02Img={subTitle02Img}
-        subTitle02Description={subTitle02Description}
-      />
+      <NotionPage notionProjectName={subTitle} />
     </motion.div>
   );
 };
