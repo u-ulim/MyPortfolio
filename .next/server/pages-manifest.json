@@ -2,6 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/api/notion-project": "pages/api/notion-project.js",
-  "/api/notion-blocks": "pages/api/notion-blocks.js"
+  "/api/notion": "pages/api/notion.js"
 }
