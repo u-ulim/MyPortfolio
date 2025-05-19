@@ -1,8 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const ModalContent = ({
-  id,
   title,
   subTitle01,
   subTitle01Img,
@@ -12,111 +11,50 @@ const ModalContent = ({
   subTitle01Description,
   subTitle02Description,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [notionData, setNotionData] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchNotionData = async () => {
-      if (!id) return;
-
-      setIsLoading(true);
-      setError(null);
-
-      try {
-        const response = await fetch(`/api/notion?id=${id}`);
-
-        if (!response.ok) {
-          throw new Error(`API 요청 실패: ${response.status}`);
-        }
-
-        const data = await response.json();
-        setNotionData(data);
-      } catch (err) {
-        console.error("Notion 데이터 가져오기 실패:", err);
-        setError("데이터를 불러오는 중 오류가 발생했습니다.");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchNotionData();
-  }, [id]);
-
-  // 로컬 props와 Notion 데이터 병합
-  const contentData = notionData || {
-    title,
-    subTitle01,
-    subTitle01Img,
-    subTitle01Description,
-    subTitle02,
-    subTitle02Img,
-    subTitle02Description,
-    description,
-  };
-
-  if (isLoading) {
-    return <div className="text-center py-8">데이터를 불러오는 중...</div>;
-  }
-
-  if (error) {
-    return (
-      <div className="text-center py-8 text-red-500">
-        {error}
-        <p className="mt-2 text-sm">로컬 데이터를 대신 표시합니다.</p>
-      </div>
-    );
-  }
-
   return (
     <div>
-      {contentData.title && (
-        <h2 className="text-[32px] font-semibold mb-[12px]">
-          {contentData.title}
-        </h2>
+      {title && (
+        <h2 className="text-[32px] font-semibold mb-[12px]">{title}</h2>
       )}
-      {contentData.subTitle01 && (
+      {subTitle01 && (
         <>
           <h3 className="text-[18px] sm:text-[18px] font-semibold mb-[12px]">
-            {contentData.subTitle01}
+            {subTitle01}
           </h3>
-          {contentData.subTitle01Img && (
+          {subTitle01Img && (
             <img
-              src={contentData.subTitle01Img}
-              alt={contentData.title}
+              src={subTitle01Img}
+              alt={title}
               className="w-full object-contain mb-[12px]"
             />
           )}
 
-          {contentData.subTitle01Description && (
+          {subTitle01Description && (
             <p className="font-normal text-[16px] text-gray-400">
-              {contentData.subTitle01Description}
+              {subTitle01Description}
             </p>
           )}
         </>
       )}
-      {contentData.description && (
-        <p className="font-normal text-[16px] text-gray-400">
-          {contentData.description}
-        </p>
+      {description && (
+        <p className="font-normal text-[16px] text-gray-400">{description}</p>
       )}
-      {contentData.subTitle02 && (
+      {subTitle02 && (
         <>
           <h3 className="text-[18px] sm:text-[18px] font-semibold mb-[12px]">
-            {contentData.subTitle02}
+            {subTitle02}
           </h3>
-          {contentData.subTitle02Img && (
+          {subTitle02Img && (
             <img
-              src={contentData.subTitle02Img}
-              alt={contentData.title}
+              src={subTitle02Img}
+              alt={title}
               className="w-full object-contain mb-[12px]"
             />
           )}
 
-          {contentData.subTitle02Description && (
+          {subTitle02Description && (
             <p className="font-normal text-[16px] text-gray-400">
-              {contentData.subTitle02Description}
+              {subTitle02Description}
             </p>
           )}
         </>

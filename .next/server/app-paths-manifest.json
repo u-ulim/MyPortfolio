@@ -1,4 +1,4 @@
 {
-  "/page": "app/page.js",
-  "/notion-test/page": "app/notion-test/page.js"
+  "/notion-test/page": "app/notion-test/page.js",
+  "/page": "app/page.js"
 }
