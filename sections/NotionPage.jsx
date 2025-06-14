@@ -191,6 +191,7 @@ const NotionPage = ({ notionProjectName }) => {
 
   // 토글 상태 변경 함수
   const handleToggle = (toggleId) => {
+    console.log("토글 클릭:", toggleId, "현재 상태:", openToggles[toggleId]);
     setOpenToggles((prev) => ({
       ...prev,
       [toggleId]: !prev[toggleId],
@@ -247,6 +248,14 @@ const NotionPage = ({ notionProjectName }) => {
         );
       case "toggle":
         const isOpen = openToggles[block.id] || false;
+        console.log(
+          "토글 렌더링:",
+          block.id,
+          "열림 상태:",
+          isOpen,
+          "자식:",
+          block.children
+        );
         return (
           <div className="mb-2">
             <div
@@ -261,12 +270,18 @@ const NotionPage = ({ notionProjectName }) => {
               </span>
               <span className="font-medium">{block.text}</span>
             </div>
-            {isOpen && block.children && (
+            {isOpen && block.children && block.children.length > 0 ? (
               <div className="pl-6 mt-1 border-l-2 border-gray-200 dark:border-gray-700">
                 {block.children.map((childBlock) => (
                   <div key={childBlock.id}>{renderBlock(childBlock)}</div>
                 ))}
               </div>
+            ) : (
+              isOpen && (
+                <div className="pl-6 mt-1 text-gray-500 dark:text-gray-400">
+                  비어 있는 토글입니다
+                </div>
+              )
             )}
           </div>
         );
@@ -399,7 +414,9 @@ const NotionPage = ({ notionProjectName }) => {
                         className="w-full h-full object-cover"
                       />
                     </i>
-                    <span>주제</span>
+                    <span className="inline-block w-auto min-w-[120px]">
+                      주제
+                    </span>
                   </div>
                   <div className={`${styles.exploreModalListContent}`}>
                     {project.Name}
@@ -414,7 +431,9 @@ const NotionPage = ({ notionProjectName }) => {
                         className="w-full h-full object-cover"
                       />
                     </i>
-                    <span>프로젝트 유형</span>
+                    <span className="inline-block w-auto min-w-[120px]">
+                      프로젝트 유형
+                    </span>
                   </div>
                   <div className={`${styles.exploreModalListContent}`}>
                     {project["Multi-select"] &&
@@ -431,7 +450,9 @@ const NotionPage = ({ notionProjectName }) => {
                         className="w-full h-full object-cover"
                       />
                     </i>
-                    <span>기간</span>
+                    <span className="inline-block w-auto min-w-[120px]">
+                      기간
+                    </span>
                   </div>
                   <div className={`${styles.exploreModalListContent}`}>
                     {project.기간}
@@ -446,7 +467,9 @@ const NotionPage = ({ notionProjectName }) => {
                         className="w-full h-full object-cover"
                       />
                     </i>
-                    <span>링크</span>
+                    <span className="inline-block w-auto min-w-[120px]">
+                      링크
+                    </span>
                   </div>
                   <div className={`${styles.exploreModalListContent}`}>
                     {project.link}
@@ -461,7 +484,9 @@ const NotionPage = ({ notionProjectName }) => {
                         className="w-full h-full object-cover"
                       />
                     </i>
-                    <span>Open With PDF</span>
+                    <span className="inline-block w-auto min-w-[120px]">
+                      Open With PDF
+                    </span>
                   </div>
                   <div className={`${styles.exploreModalListContent}`}>
                     {project["Open With PDF"] &&

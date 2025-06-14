@@ -45,7 +45,7 @@ const styles = {
     "w-full h-full absolute bg-gradient-to-b from-white via-[#e0e7ff] to-[#f3f4f6] dark:bg-gradient-to-b dark:from-black dark:via-[#191327] dark:to-[#2b2048]",
 
   estrela: "bg-white rounded-full absolute animate-estrela",
-  exploreModalList: "flex mt-[12px] text-[14px]",
+  exploreModalList: "flex gap-[12px] mt-[12px] text-[14px]",
   exploreModalListTitle:
     "flex flex-[0.5] sm:flex-[0.3] gap-[4px] text-gray-500 ",
   exploreModalListContent:
