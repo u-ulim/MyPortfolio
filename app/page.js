@@ -14,9 +14,11 @@ const Page = () => {
   return (
     <>
       <div className="relativebg-primary-white overflow-hidden">
-        <Navbar />
+        <div className="relative z-100 w-full">
+          <Navbar />
+        </div>
         <Hero />
-        <div className="relative z-50">
+        <div className="relative z-10">
           <About />
           {/* <div className="absolute inset-0 gradient-03 z--10" /> */}
           <Main />

@@ -57,14 +57,18 @@ const MainCard = ({
     if (isOpenModal) {
       document.body.style.overflow = "hidden"; // 스크롤 비활성화
       document.body.style.marginRight = "15px";
+      document.querySelector("nav").style.marginRight = "15px";
     } else {
       document.body.style.overflow = ""; // 기본 상태로 복원
       document.body.style.marginRight = "0px";
+      document.querySelector("nav").style.marginRight = "0px";
     }
 
     // 컴포넌트 언마운트 시 원래 상태로 복원
     return () => {
       document.body.style.overflow = ""; // 기본 상태로 복원
+      document.body.style.marginRight = "0px";
+      document.querySelector("nav").style.marginRight = "0px";
     };
   }, [isOpenModal]);
 
