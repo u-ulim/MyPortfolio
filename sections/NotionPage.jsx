@@ -157,7 +157,9 @@ const NotionPage = ({ notionProjectName }) => {
     switch (block.type) {
       // 일반 텍스트 단락
       case "paragraph":
-        return <p className="mb-4">{block.text}</p>;
+        return (
+          <p className="mb-8 text-gray-500 dark:text-gray-400">{block.text}</p>
+        );
 
       // 제목들 (크기별로 구분)
       case "heading_1":
@@ -381,7 +383,20 @@ const NotionPage = ({ notionProjectName }) => {
                   </span>
                 </div>
                 <div className={`${styles.exploreModalListContent}`}>
-                  {project.link}
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline cursor-pointer transition-colors duration-200 break-all"
+                    >
+                      {project.link}
+                    </a>
+                  ) : (
+                    <span className="text-gray-500 dark:text-gray-400">
+                      링크가 없습니다
+                    </span>
+                  )}
                 </div>
               </li>
 
@@ -400,9 +415,31 @@ const NotionPage = ({ notionProjectName }) => {
                   </span>
                 </div>
                 <div className={`${styles.exploreModalListContent}`}>
-                  {/* PDF 파일 배열을 쉼표로 구분하여 표시 */}
+                  {/* PDF 파일들을 클릭 가능한 다운로드 링크로 표시 */}
                   {project["Open With PDF"] &&
-                    project["Open With PDF"].join(", ")}
+                  project["Open With PDF"].length > 0 ? (
+                    project["Open With PDF"].map((pdfFile, index) => (
+                      <span key={index}>
+                        <a
+                          href={
+                            typeof pdfFile === "object" ? pdfFile.url : pdfFile
+                          }
+                          download
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline cursor-pointer transition-colors duration-200"
+                        >
+                          {typeof pdfFile === "object" ? pdfFile.name : pdfFile}
+                        </a>
+                        {/* 마지막 파일이 아니면 쉼표 추가 */}
+                        {index < project["Open With PDF"].length - 1 && ", "}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="text-gray-500 dark:text-gray-400">
+                      PDF 파일이 없습니다
+                    </span>
+                  )}
                 </div>
               </li>
             </ul>
