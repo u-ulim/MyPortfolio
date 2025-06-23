@@ -3,6 +3,7 @@
 import "../styles/globals.css";
 import { ThemeProvider } from "../context/ThemeContext";
 import ThemeToggle from "../components/ThemeToggle";
+import { Analytics } from "@vercel/analytics/react";
 
 const RootLayout = ({ children }) => (
   <html lang="en">
@@ -17,6 +18,7 @@ const RootLayout = ({ children }) => (
       <ThemeProvider>
         <div className="min-h-screen bg-dark-bg dark:bg-dark-bg text-light-text dark:text-dark-text transition-colors duration-200">
           {children}
+          <Analytics />
           <ThemeToggle />
         </div>
       </ThemeProvider>
