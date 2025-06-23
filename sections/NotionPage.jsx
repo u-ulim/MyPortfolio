@@ -583,14 +583,14 @@ const NotionPage = ({ notionProjectName }) => {
             )}
 
             {/* ===== 개발용 캐시 삭제 버튼 ===== */}
-            {!loading && (
+            {/* {!loading && (
               <button
                 onClick={clearCache}
                 className="mt-8 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
               >
                 캐시 지우기
               </button>
-            )}
+            )} */}
           </div>
         )}
       </div>
