@@ -47,7 +47,7 @@ export const startingFeatures = [
   {
     id: "feature-1",
     title: "이력서 & 자기소개서",
-    link: "https://drive.google.com/file/d/1_i2E8elTD7i0r_QSiP9q14h12TNqL2Sd/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1Pk0Y4vPvhpQN4et4Dvijj_5b36rFPbOC/view?usp=sharing",
   },
   {
     id: "feature-2",
