@@ -100,6 +100,13 @@ export const insights = [
     link: "https://pixelwire.netlify.app/",
     category: "JS",
   },
+  {
+    imgUrl: "/toy-musicWave.png",
+    title: "MusicWave",
+    subtitle: "뮤직 플레이어 웹앱 사이트",
+    link: "https://musicwaveplay.netlify.app/",
+    category: "JS",
+  },
 ];
 
 export const socials = [
