@@ -17,16 +17,24 @@ const Page = () => {
         <div className="relative z-100 w-full">
           <Navbar />
         </div>
-        <Hero />
+        <div id="home">
+          <Hero />
+        </div>
         <div className="relative z-10">
           <About />
           {/* <div className="absolute inset-0 gradient-03 z--10" /> */}
-          <Main />
+          <div id="project">
+            <Main />
+          </div>
         </div>
         <div className="relative z-10">
-          <Insights />
+          <div id="toy-project">
+            <Insights />
+          </div>
           {/* <div className="absolute inset-0 gradient-04 z--10" /> */}
-          <GetStarted />
+          <div id="introduction">
+            <GetStarted />
+          </div>
         </div>
         <div className="fixed top-0 left-0 w-full h-full z--100">
           <StarrySky className="absolute top-0 left-0 w-full h-full z--100" />

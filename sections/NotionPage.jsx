@@ -69,10 +69,20 @@ const NotionPage = ({ notionProjectName }) => {
       // 1. 캐시된 데이터가 있는지 확인
       const localCache = loadCacheFromStorage();
 
-      if (localCache[notionProjectName]) {
-        // 캐시된 데이터가 있으면 바로 사용
-        setProject(localCache[notionProjectName].project);
-        setBlocks(localCache[notionProjectName].blocks);
+      const cachedData = localCache[notionProjectName];
+
+      // 캐시 만료 시간 체크 (1시간 = 3600000ms)
+      const CACHE_EXPIRY_TIME = 3600000; // 1시간
+      const now = Date.now();
+
+      if (
+        cachedData &&
+        cachedData.timestamp &&
+        now - cachedData.timestamp < CACHE_EXPIRY_TIME
+      ) {
+        // 캐시된 데이터가 있고 만료되지 않았으면 바로 사용
+        setProject(cachedData.project);
+        setBlocks(cachedData.blocks);
         setLoading(false);
         return;
       }
@@ -244,10 +254,126 @@ const NotionPage = ({ notionProjectName }) => {
         {/* ===== 로딩 상태 UI ===== */}
         {loading && (
           <>
-            {/* 로딩 스피너 */}
+            {/* 로켓 발사 애니메이션 */}
             <div className="absolute inset-0 flex justify-center items-center bg-white/50 dark:bg-black/50 z-10">
-              <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-blue-500 dark:border-blue-400"></div>
+              <div className="relative flex flex-col items-center">
+                {/* 로켓 */}
+                <div className="rocket-container mb-4">
+                  <div className="rocket animate-rocket-launch">🚀</div>
+                  {/* 로켓 연기/불꽃 효과 */}
+                  <div className="rocket-fire animate-fire">
+                    <div className="fire-particle"></div>
+                    <div className="fire-particle"></div>
+                    <div className="fire-particle"></div>
+                  </div>
+                </div>
+                {/* 로딩 텍스트 */}
+                <p className="text-blue-600 dark:text-blue-400 font-medium animate-pulse">
+                  데이터를 불러오는 중...
+                </p>
+              </div>
             </div>
+
+            {/* 로켓 애니메이션 CSS */}
+            <style jsx>{`
+              .rocket-container {
+                position: relative;
+                height: 80px;
+                width: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+
+              .rocket {
+                font-size: 40px;
+                position: relative;
+                z-index: 2;
+                transform-origin: center;
+              }
+
+              @keyframes rocket-launch {
+                0% {
+                  transform: translateY(0px) rotate(0deg);
+                }
+                25% {
+                  transform: translateY(-5px) rotate(-5deg);
+                }
+                50% {
+                  transform: translateY(-10px) rotate(5deg);
+                }
+                75% {
+                  transform: translateY(-5px) rotate(-2deg);
+                }
+                100% {
+                  transform: translateY(0px) rotate(0deg);
+                }
+              }
+
+              .animate-rocket-launch {
+                animation: rocket-launch 1.5s ease-in-out infinite;
+              }
+
+              .rocket-fire {
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 20px;
+                height: 30px;
+              }
+
+              .fire-particle {
+                position: absolute;
+                width: 4px;
+                height: 8px;
+                background: linear-gradient(45deg, #ff6b35, #f7931e, #ffcc02);
+                border-radius: 2px;
+                animation: fire-flicker 0.8s ease-in-out infinite;
+              }
+
+              .fire-particle:nth-child(1) {
+                left: 50%;
+                transform: translateX(-50%);
+                animation-delay: 0s;
+              }
+
+              .fire-particle:nth-child(2) {
+                left: 30%;
+                animation-delay: 0.2s;
+              }
+
+              .fire-particle:nth-child(3) {
+                left: 70%;
+                animation-delay: 0.4s;
+              }
+
+              @keyframes fire-flicker {
+                0%,
+                100% {
+                  opacity: 1;
+                  transform: translateY(0px) scaleY(1);
+                }
+                50% {
+                  opacity: 0.7;
+                  transform: translateY(-5px) scaleY(1.2);
+                }
+              }
+
+              .animate-fire {
+                animation: fire-intensity 1.5s ease-in-out infinite;
+              }
+
+              @keyframes fire-intensity {
+                0%,
+                100% {
+                  filter: brightness(1);
+                }
+                50% {
+                  filter: brightness(1.3);
+                }
+              }
+            `}</style>
 
             {/* 스켈레톤 UI - 로딩 중 표시할 placeholder */}
             <div className="bg-white dark:bg-black shadow-md rounded p-6 text-black dark:text-white opacity-60">

@@ -15,21 +15,8 @@ const MainCard = ({
   active,
   handleClick,
   subTitle,
-  date,
-  teamType,
   link,
-  pathPdfLink,
   techStack,
-  logo,
-  iaWbs,
-  startDescription,
-  studyDescription,
-  subTitle01,
-  subTitle01Img,
-  subTitle01Description,
-  subTitle02,
-  subTitle02Img,
-  subTitle02Description,
 }) => {
   const [isOpenModal, setIsOpenModal] = useState(false); // 모달 상태 관리
   const [tooltipIndex, setTooltipIndex] = useState(null); // 툴팁 상태 관리
@@ -143,20 +130,28 @@ const MainCard = ({
                 />
               </i>
             </div>
-            <Link href={link} alt={title}>
+            {link ? (
+              <Link href={link} alt={title}>
+                <div className="flex items-center justify-between gap-[12px] sm:justify-start mb-[12px]">
+                  <p className="font-normal text-[16px] leading-[20.16px] text-gray-400 uppercase cursor-pointer">
+                    ✈️ 사이트 구경하기
+                  </p>
+                  <i className="w-[20px] h-[20px] cursor-pointer block">
+                    <img
+                      src="/link.svg"
+                      alt="link"
+                      className="w-full h-full object-cover"
+                    />
+                  </i>
+                </div>
+              </Link>
+            ) : (
               <div className="flex items-center justify-between gap-[12px] sm:justify-start mb-[12px]">
-                <p className="font-normal text-[16px] leading-[20.16px] text-gray-400 uppercase cursor-pointer">
-                  ✈️ 사이트 구경하기
+                <p className="font-normal text-[16px] leading-[20.16px] text-gray-500 dark:text-gray-400 uppercase">
+                  🚧 개발 중
                 </p>
-                <i className="w-[20px] h-[20px] cursor-pointer block">
-                  <img
-                    src="/link.svg"
-                    alt="link"
-                    className="w-full h-full object-cover"
-                  />
-                </i>
               </div>
-            </Link>
+            )}
 
             <h2 className=" font-semibold sm:text-[32px] text-[24px] text-white">
               {title}

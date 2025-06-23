@@ -18,30 +18,20 @@ const Footer = () => {
       <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
         <div className="flex items-center justify-between flex-wrap gap-5">
           <h4 className="font-bold md:text-[64px] text-[44px]">연락처 📩</h4>
-          <button
-            type="button"
-            className="flex items-center h-fit py-4 px-6  bg-[#25618b] rounded-[32px] gap-[12px]"
-          >
-            <span className="font-normal text-[16px] text-white leading-[20px]">
-              함께하기
-            </span>
-          </button>
         </div>
         <div className="flex flex-col">
           <div className="mb-[50px] h-[2px] bg-[#555555] opacity-15" />
           <div className="flex items-center justify-between flex-wrap gap-4">
-            <motion.h2
+            <motion.p
               variants={textGradientVariant}
               initial="initial"
               animate="animate"
               className={`${styles.textHeading}`}
             >
-              KIM DO KYUNG
-            </motion.h2>
-
-            <p className="font-normal text-[16px] leading-[20px] ">
               010-9248-9214
-            </p>
+            </motion.p>
+
+            <p>KIM DO KYOUNG</p>
           </div>
         </div>
       </div>

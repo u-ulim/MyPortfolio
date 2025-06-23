@@ -1,102 +1,58 @@
 export const projects = [
   {
     id: "world-1",
-    imgUrl: "/nom.png",
-    logo: "/nomore-logo.svg",
-    title: "노모어피자 개발",
-    subTitle: "no more pizza",
-    date: "24.10.20~24.11.20",
-    teamType: "개인 프로젝트",
-    link: "https://nomorepizza.co.kr/",
-    pathPdfLink: "/no-more-pizza.pdf",
-    techStack: ["wp"],
-    startDescription:
-      "NoMorePizza는 기존 사이트를 리뉴얼해서 워드프레스로 구성해보았습니다.",
-    studyDescription: "",
+    imgUrl: "/primeThumb.png",
+    title: "프라임 기획코딩",
+    subTitle: "Prime",
+    link: "https://teamproject-prime-a5592.web.app/index.html",
+    techStack: ["scss", "js", "figma"],
   },
+
   {
     id: "world-2",
-    imgUrl: "/custom.png",
-    logo: "/nomore-logo.svg",
-    title: "쓰레드 클론코딩",
-    subTitle: "Threads",
-    date: "24.09.09~24.10.18",
-    teamType: "팀 프로젝트",
-    link: "https://github.com/JH-JH-JH/thread-clone",
-    pathPdfLink: "/thread.pdf",
-    techStack: ["react", "figma", "firebase", "styled-components"],
-    startDescription: "Thread는",
-    studyDescription: "",
-    iaWbs: "IA, WBS",
+    imgUrl: "/displayFlexThumb.png",
+    title: "DisplayFlex",
+    subTitle: "DisplayFlex",
+    link: "https://display-flex-jade.vercel.app/",
+    techStack: ["next", "ts", "tailwind", "supabase"],
   },
   {
     id: "world-3",
-    imgUrl: "/custom.png",
-    logo: "/prime-logo.svg",
-    title: "프라임 기획코딩",
-    subTitle: "Prime",
-    date: "24.07.15~24.09.06",
-    teamType: "팀 프로젝트",
-    link: "https://github.com/JH-JH-JH/prime-clone",
-    pathPdfLink: "/prime.pdf",
-    techStack: ["scss", "js", "figma"],
-    startDescription:
-      "4인 1조로 한 팀을 이뤘다. PM이라는 자리가 설레기도 하면서 걱정도 많이 됐다. 기획과 설계, 개발 과정에서 시야를 넓게 봐야하기 때문에, 혹여 팀원들에게 잘못된 방향성을 제시할까봐 겁도 났던 거 같다.  그치만, 의견도 많이 내주고 힘내라고 복돋아주는 팀원들 덕에 빠르게 방향성과 컨셉을 잡고, 순차적으로 진행할 수 있었다",
-    studyDescription:
-      "4인 1조가 한 팀이 되면서부터, 학원이 끝난 18:30부터 20:00까지 매일 스터디를 진행하였다. 내용은 HTML, CSS 기초 관련 내용 / 빠른 진행과 개발, 화려한 연출보다는 기본에 충실하고 싶었다. 느리게 가는 것이 가장 빠른 방법이라 믿었다. 그로 인해 조금이나마 실력이 향상되었음에 뿌듯함을 느꼈다.",
-    subTitle01: "IA)",
-    subTitle01Img: "/ia-subtitleImg.png",
-    subTitle01Description:
-      "information architecture는 크게 총 4가지로 구성되었다. Index / Cart / Product Detail / Login, 그 줄기를 뻗어나가 상세페이지를 구성하였고, 서브페이지는 재량 껏이라 잠깐 보류했다. WBS에서 기술된 것처럼, Core Page 4가지를 완성하면 추가 개발하기로 했다.",
-    subTitle02: "WBS)",
-    subTitle02Img: "/ia-subtitleImg.png",
-    subTitle02Description:
-      "information architecture는 크게 총 4가지로 구성되었다. Index / Cart / Product Detail / Login, 그 줄기를 뻗어나가 상세페이지를 구성하였고, 서브페이지는 재량 껏이라 잠깐 보류했다. WBS에서 기술된 것처럼, Core Page 4가지를 완성하면 추가 개발하기로 했다.",
+    imgUrl: "/interViewerThumb.png",
+    title: "인터뷰어",
+    subTitle: "InterViewer",
+    link: "https://github.com/Seoul-InterViewer/InterViewer",
+    techStack: ["next", "ts", "tailwind", "supabase"],
   },
   {
     id: "world-4",
-    imgUrl: "/net.png",
-    logo: "/nomore-logo.svg",
-    title: "OTT 서비스 사이트",
-    subTitle: "OTT",
-    date: "24.09.09~24.10.18",
-    teamType: "팀 프로젝트",
-    link: "https://github.com/JH-JH-JH/ott-clone",
-    pathPdfLink: "/ott.pdf",
-    techStack: ["react", "ts", "tailwind", "recoil"],
-    startDescription: "OTT는",
-    studyDescription: "",
-    iaWbs: "IA, WBS",
+    imgUrl: "/threadsThumb.png",
+    title: "쓰레드 클론코딩",
+    subTitle: "Threads",
+    link: "https://project-threads.web.app/search",
+    techStack: ["react", "figma", "firebase", "styled-components"],
   },
+
   {
     id: "world-5",
     imgUrl: "/custom.png",
-    logo: "/nomore-logo.svg",
-    title: "개인 커스텀",
-    subTitle: "Custom",
-    date: "24.07.15~24.09.06",
-    teamType: "개인 프로젝트",
-    link: "https://github.com/JH-JH-JH/custom-clone",
-    pathPdfLink: "/custom.pdf",
-    techStack: ["react", "ts", "tailwind", "graphql"],
-    startDescription: "Custom은",
-    studyDescription: "",
-    iaWbs: "IA, WBS",
+    title: "가계부",
+    subTitle: "Account",
+
+    techStack: ["react", "ts", "tailwind", "figma"],
   },
 ];
 
 export const startingFeatures = [
   {
     id: "feature-1",
-    title: "이력서",
+    title: "이력서 & 자기소개서",
+    link: "https://drive.google.com/file/d/1_i2E8elTD7i0r_QSiP9q14h12TNqL2Sd/view?usp=sharing",
   },
   {
     id: "feature-2",
-    title: "자기소개서",
-  },
-  {
-    id: "feature-3",
     title: "경력기술서",
+    link: "https://drive.google.com/file/d/17pwLVavhoP61nhqogkVnWdnf-u7FOSBI/view?usp=sharing",
   },
 ];
 
@@ -117,22 +73,32 @@ export const newFeatures = [
 
 export const insights = [
   {
-    imgUrl: "/planet-06.png",
-    title: "넷플릭스 사이트",
-    subtitle:
-      "React, TS, Style Components를 사용해서 넷플릭스 사이트를 만들어 보았습니다. 또한 영화 추천 페이지를 만들어서 사용자의 편의성을 높였습니다.",
-    category: "React",
+    imgUrl: "/toy-chef.png",
+    title: "ChefStory",
+    subtitle: "프리미엄, 베이직으로 구성된, 요리 레시피 사이트",
+    link: "https://chefstory.netlify.app/",
+    category: "JS",
   },
   {
-    imgUrl: "/planet-07.png",
-    title: "슬라이더 프로젝트",
-    subtitle:
-      "HTML, CSS, JS를 사용해서 Slider를 만들었습니다. 모바일에 반응이 되게 하였고, 날씨나 계절감을 반영하도록 weather 데이터를 사용하였습니다.",
+    imgUrl: "/toy-roblox.png",
+    title: "Roblox Login",
+    subtitle: "로블록스 게임 사이트의 로그인 페이지를 구현",
+    link: "https://blos.netlify.app/",
+    category: "JS",
   },
   {
-    imgUrl: "/planet-08.png",
-    title: "싸이월드 프로젝트",
-    subtitle: "React, Tailwind를 사용해서 레트로한 감성을 살려보았습니다.",
+    imgUrl: "/toy-nexus.png",
+    title: "Nexus",
+    subtitle: "flex, grid를 사용한 게임 사이트 구현",
+    link: "https://nexusplaying.netlify.app/",
+    category: "JS",
+  },
+  {
+    imgUrl: "/toy-pixelWire.png",
+    title: "PixelWire",
+    subtitle: "픽셀아트 느낌을 살린 레트로한 느낌의 레이아웃 사이트",
+    link: "https://pixelwire.netlify.app/",
+    category: "JS",
   },
 ];
 
@@ -171,5 +137,9 @@ export const workExperience = [
   {
     id: "work-4",
     title: "프론트엔드 개발자 교육 | KDT",
+  },
+  {
+    id: "work-5",
+    title: "뉴딜 풀스텍 개발자 교육 | MAINBIZ",
   },
 ];

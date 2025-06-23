@@ -55,6 +55,18 @@ const Navbar = () => {
     { name: "Introduction", href: "#introduction" },
   ];
 
+  // 부드러운 스크롤 함수
+  const scrollToSection = (href) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    closeSidebar(); // 스크롤 후 사이드바 닫기
+  };
+
   return (
     <>
       <motion.nav
@@ -73,7 +85,7 @@ const Navbar = () => {
             animate="animate"
             className={`${styles.textHeading}`}
           >
-            KIM DO KYUNG
+            KIM DO KYOUNG
           </motion.h2>
           <div className="flex items-center gap-4">
             <button onClick={toggleSidebar} className="relative z-10">
@@ -105,7 +117,7 @@ const Navbar = () => {
         variants={sidebarVariants}
         initial="hidden"
         animate={isSidebarOpen ? "show" : "hidden"}
-        className="fixed top-0 right-0 h-full w-80 bg-primary-black/90 backdrop-blur-md z-[9999] shadow-xl"
+        className="fixed top-0 right-0 h-full w-60 bg-primary-black/90 backdrop-blur-md z-[9999] shadow-xl"
       >
         <div className="p-8">
           {/* Close Button */}
@@ -133,11 +145,10 @@ const Navbar = () => {
           {/* Menu Items */}
           <div className="space-y-6">
             {menuItems.map((item, index) => (
-              <motion.a
+              <motion.button
                 key={item.name}
-                href={item.href}
-                onClick={closeSidebar}
-                className="block text-white text-xl font-medium hover:text-secondary-white transition-colors"
+                onClick={() => scrollToSection(item.href)}
+                className="block text-white text-xl font-medium hover:text-secondary-white transition-colors cursor-pointer text-left w-full"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{
                   opacity: isSidebarOpen ? 1 : 0,
@@ -149,7 +160,7 @@ const Navbar = () => {
                 }}
               >
                 {item.name}
-              </motion.a>
+              </motion.button>
             ))}
           </div>
 
