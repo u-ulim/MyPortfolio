@@ -1,14 +1,5 @@
 import { Footer, Navbar, StarrySky } from "../components";
-import {
-  About,
-  Main,
-  Feedback,
-  GetStarted,
-  Hero,
-  Insights,
-  WhatsNew,
-  World,
-} from "../sections";
+import { About, Main, Hero, Insights, Resume, Career } from "../sections";
 
 const Page = () => {
   return (
@@ -33,13 +24,13 @@ const Page = () => {
           </div>
           {/* <div className="absolute inset-0 gradient-04 z--10" /> */}
           <div id="introduction">
-            <GetStarted />
+            <Resume />
           </div>
         </div>
         <div className="fixed top-0 left-0 w-full h-full z--100">
           <StarrySky className="absolute top-0 left-0 w-full h-full z--100" />
         </div>
-        <Feedback className="relative z-10" />
+        <Career className="relative z-10" />
         <Footer className="relative z-10" />
       </div>
     </>
