@@ -4,7 +4,7 @@ import ModalContent from "./ModalContent";
 import MainCard from "./MainCard";
 import ResumeFile from "./ResumeFile";
 import NewFeatures from "./NewFeatures";
-import InsightCard from "./InsightCard";
+import ToyProjectCard from "./ToyProjectCard";
 import Footer from "./Footer";
 import StarrySky from "./StarrySky";
 import StartSteps from "./StartSteps";
@@ -17,7 +17,7 @@ export {
   ResumeFile,
   NewFeatures,
   MainCard,
-  InsightCard,
+  ToyProjectCard,
   Footer,
   StarrySky,
   StartSteps,

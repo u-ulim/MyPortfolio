@@ -1,5 +1,5 @@
 import { Footer, Navbar, StarrySky } from "../components";
-import { About, Main, Hero, Insights, Resume, Career } from "../sections";
+import { About, Main, Hero, ToyProject, Resume, Career } from "../sections";
 
 const Page = () => {
   return (
@@ -20,7 +20,7 @@ const Page = () => {
         </div>
         <div className="relative z-10">
           <div id="toy-project">
-            <Insights />
+            <ToyProject />
           </div>
           {/* <div className="absolute inset-0 gradient-04 z--10" /> */}
           <div id="introduction">

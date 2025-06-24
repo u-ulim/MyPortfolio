@@ -71,7 +71,7 @@ export const newFeatures = [
   },
 ];
 
-export const insights = [
+export const toyProjects = [
   {
     imgUrl: "/toy-chef.png",
     title: "ChefStory",
